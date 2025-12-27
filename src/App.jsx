@@ -27,8 +27,14 @@ function App() {
       <Team />
       <Contact />
       <Footer />
-      <div id="top" className="w-[30px] h-[30px] text-center rounded border border-green-500 fixed bottom-0 right-0 m-4 cursor-pointer"><a href="#hero-section"><img src={topArrow} alt="to top" /></a></div>
-
+      <div
+        id="top"
+        className="w-[30px] h-[30px] text-center rounded border border-green-500 fixed bottom-0 right-0 m-4 cursor-pointer"
+      >
+        <a href="#hero-section">
+          <img src={topArrow} alt="to top" />
+        </a>
+      </div>
     </>
   );
 }
