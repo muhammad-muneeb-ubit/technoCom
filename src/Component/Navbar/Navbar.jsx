@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TechnoCom from "../../assets/TechnoCom.jfif";
+import TechnoCom from "../../assets/technocom.jfif";
 
 const Navbar = () => {
   const links = [
