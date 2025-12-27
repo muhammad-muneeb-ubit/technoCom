@@ -3,8 +3,8 @@ import bannerImage from '../../assets/banner-image.png'
 
 const HeroSection = () => {
   return (
-    <div className='hero-section flex items-center justify-center px-8 pt-12 w-full'>
-      <div className='left-section w-1/2 flex flex-col gap-6 mx-12 pb-12'>
+    <div id="hero-section" className='hero-section flex items-center justify-center px-8 pt-12 w-full'>
+      <div className='pt-24 left-section w-1/2 flex flex-col gap-6 mx-12 pb-12'>
             <div className='heading text-4xl text-green-500 '>Cloud Book</div>
             <div className='text text-[18px] '>
                 <p>Seamless integration of all the information flowing through a company.</p>

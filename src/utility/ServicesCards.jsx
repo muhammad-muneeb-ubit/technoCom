@@ -1,6 +1,6 @@
 import React from 'react'
 import Cloud from '../assets/cloud-service.png'
-const Cards = ({ icon, name, desc }) => {
+const ServicesCards = ({ icon, name, desc }) => {
   return (
     <div style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} className='w-1/4 p-3  flex flex-col justify-center items-center gap-4 hover:shadow-xl hover:scale-105 hover:cursor-pointer transition-all duration-300'>
         <div className="icon w-2/3"><img src={icon} alt="" /></div>
@@ -10,4 +10,4 @@ const Cards = ({ icon, name, desc }) => {
   )
 }
 
-export default Cards
+export default ServicesCards

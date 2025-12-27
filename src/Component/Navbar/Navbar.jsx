@@ -1,18 +1,62 @@
-import React from 'react'
-import { NavLink, useLocation } from "react-router-dom";
-import Logo from '../../assets/logo-wo.png'
-const Navbar = () => {
-    const links = ["Home","Services", "About", "Products","Clients", "Teams", "Contact"];
-  return (
-    <div className="navbar bg-green-200 w-full  flex items-center justify-between p-6  text-xl ">
-        <div className="logo mx-12"><img className='max-w-36' src={Logo} alt="Logo" /></div>
-        <div className="nav-links mx-12 flex gap-6 text-green-700 font-medium">
-            {links.map((link)=>{
-                return <a href={"#"+link.toLowerCase()} className='hover:underline hover:text-green-400' key={link}>{link}</a>
-            })}
-        </div>
-    </div>
-  )
-}
+import React, { useState } from "react";
+import Logo from "../../assets/logo-wo.png";
 
-export default Navbar
+const Navbar = () => {
+  const links = [
+    { name: "Home", hash: "#hero-section" },
+    { name: "Services", hash: "#services" },
+    { name: "About", hash: "#about" },
+    { name: "Products", hash: "#products" },
+    { name: "Clients", hash: "#clients" },
+    { name: "Teams", hash: "#teams" },
+    { name: "Contact", hash: "#contact" },
+  ];
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  
+
+  return (
+    <div className="fixed top-0 left-0 z-50 w-full flex items-center justify-between px-6 py-4 bg-white/30 backdrop-blur-md border border-white/20 shadow-lg">
+      
+      <img className="max-w-36" src={Logo} alt="Logo" />
+
+      <div className="hidden md:flex gap-6 text-green-700 font-medium">
+        {links.map((link) => (
+          <a
+            key={link.name}
+            href={`${link.hash}`}
+            className={ `hover:text-green-400 transition
+             hover:underline` }
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+
+      <button
+        className="md:hidden text-3xl text-green-700"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
+
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white/80 backdrop-blur-md flex flex-col items-center gap-4 py-6 md:hidden">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={`${link.hash}`}
+              onClick={() => setMenuOpen(false)}
+              className={"text-green-700 text-lg hover:text-green-500 hover:underline"}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Navbar;
