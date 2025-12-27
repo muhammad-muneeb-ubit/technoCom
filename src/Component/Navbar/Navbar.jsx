@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo-wo.png";
+import Logo from "../../assets/TechnoCom.jfif";
 
 const Navbar = () => {
   const links = [
@@ -21,13 +21,12 @@ const Navbar = () => {
       
       <img className="max-w-36" src={Logo} alt="Logo" />
 
-      <div className="hidden md:flex gap-6 text-green-700 font-medium">
+      <div className="hidden md:flex gap-6 text-green-600 font-medium">
         {links.map((link) => (
           <a
             key={link.name}
             href={`${link.hash}`}
-            className={ `hover:text-green-400 transition
-             hover:underline` }
+            className={ `hover:text-green-700 transition hover:underline text-[16px]` }
           >
             {link.name}
           </a>

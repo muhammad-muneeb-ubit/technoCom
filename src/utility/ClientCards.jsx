@@ -1,18 +1,43 @@
-const ClientCards = ({clientInfo, title}) => {
-
+const ClientCards = ({ clientInfo, title }) => {
   return (
-    <div style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} className="w-[300px] max-w-md bg-white border border-gray-200 rounded-lg shadow my-4 p-6 hover:cursor-pointer">
-      <p className="text-lg font-bold text-green-500 hover:scale-105">{title}</p>
-      <ul className="my-4 space-y-3">
-       { clientInfo.map((distributor, index) => (
-          <li key={index} className="text-gray-500 hover:text-green-600 hover:underline">
-            {distributor}
+    <div
+      className="
+      hover:border-green-400 border border-transparent
+        w-full sm:w-[300px]
+        bg-white
+        rounded-xl
+        p-6
+        shadow-md
+        hover:shadow-xl
+        hover:-translate-y-1
+        transition-all duration-300 ease-in-out
+        cursor-pointer
+      "
+    >
+      <h3 className="text-xl font-semibold text-green-700 mb-4 text-center">
+        {title}
+      </h3>
+
+      <ul className="space-y-3">
+        {clientInfo.map((client, index) => (
+          <li
+            key={index}
+            className="
+              text-gray-600
+              text-[16px]
+              flex items-center gap-2
+              
+              transition-colors
+              
+            "
+          >
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            {client}
           </li>
-        ))
-       }
-      
+        ))}
       </ul>
     </div>
   );
-}
+};
+
 export default ClientCards;

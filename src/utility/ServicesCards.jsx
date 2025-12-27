@@ -1,13 +1,39 @@
-import React from 'react'
-import Cloud from '../assets/cloud-service.png'
+
 const ServicesCards = ({ icon, name, desc }) => {
   return (
-    <div style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} className='w-1/4 p-3  flex flex-col justify-center items-center gap-4 hover:shadow-xl hover:scale-105 hover:cursor-pointer transition-all duration-300'>
-        <div className="icon w-2/3"><img src={icon} alt="" /></div>
-        <div className="name text-3xl mx-4 text-green-600">{name}</div>
-        <div className="desc mx-4 text-md">{desc}</div>
-    </div>
-  )
-}
+    <div
+      className="
+        w-full sm:w-1/2 lg:w-1/4
+        bg-white
+        rounded-xl
+        p-6
+        flex flex-col items-center text-center gap-4
+        shadow-md
+        hover:shadow-xl
+        hover:-translate-y-1
+        transition-all duration-300 ease-in-out
+        cursor-pointer
+        hover:border-green-400 border border-transparent
+        
+      "
+    >
+      <div className="w-20 h-20 flex items-center justify-center bg-green-50 rounded-full">
+        <img
+          src={icon}
+          alt={name}
+          className="w-12 h-12 object-contain"
+        />
+      </div>
 
-export default ServicesCards
+      <h3 className="text-xl font-semibold text-green-700">
+        {name}
+      </h3>
+
+      <p className="text-gray-600 text-sm leading-relaxed">
+        {desc}
+      </p>
+    </div>
+  );
+};
+
+export default ServicesCards;

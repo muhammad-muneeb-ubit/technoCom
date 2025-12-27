@@ -12,7 +12,7 @@ import "@splidejs/react-splide/css/core";
 const Products = () => {
   return (
     <div id="products" className="products-section flex items-center justify-center flex-col px-8 pt-12 w-full mb-12">
-      <div className="text-green-600 text-xl border-l-6 px-4  ">
+      <div className="text-green-600 text-3xl border-l-6 px-4  ">
         Products
       </div>
 

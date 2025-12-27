@@ -79,16 +79,16 @@ const Client = () => {
   const TextileSizers = [" Warptex Industries", "Z.K. Industries"];
   return (
     <div id="clients" className="flex flex-col justify-center items-center">
-      <div className="text-green-600 text-2xl border-l-6 px-4 py-3 my-6">
+      <div className="text-green-600 text-3xl border-l-6 px-4 py-3 my-6">
         OUR CLIENTS
       </div>
-      <div className="text-lg px-12 justify-center text-center">
+      <div className="text-[16px] px-12 justify-center text-center">
         TechnoCom is used by businesses, universities, institutions and
         associations in a wide range of industries, including software
         development, consulting, direct marketing, retail, financial,
         e-commerce, technology, travel, and manufacturing.
       </div>
-      <div className="text-lg my-6">
+      <div className="text-[16px] my-6">
         Here are just a few of the companies who are using our software's:
       </div>
       <div className="flex flex-wrap justify-center gap-4">
@@ -101,7 +101,7 @@ const Client = () => {
           clientInfo={ClearingForwarders}
           title={"Clearing Forwarders"}
         />
-        <ClientCards clientInfo={Automobile} title={"Automobile "} />
+        <ClientCards clientInfo={chemicalManufacturers} title={"Chemical"} />
         <ClientCards
           clientInfo={PlasticManufactures}
           title={"Plastic Manufactures"}
@@ -110,8 +110,8 @@ const Client = () => {
           clientInfo={FreightForwarders}
           title={"Freight Forwarders"}
         />
+        <ClientCards clientInfo={Automobile} title={"Automobile "} />
         <ClientCards clientInfo={Industrials} title={"Industrial"} />
-        <ClientCards clientInfo={chemicalManufacturers} title={"Chemical"} />
         <ClientCards clientInfo={TextileSizers} title={"Textile Sizers"} />
       </div>
     </div>

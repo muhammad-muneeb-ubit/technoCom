@@ -14,7 +14,7 @@ const Stats = () => {
                 {statsData.map((stat, index) => (
                 <div key={index}>
                     <div className='text-4xl text-green-500 font-bold'>{stat.value}</div>
-                    <div className='text-lg'>{stat.label}</div>
+                    <div className='text-[16px]'>{stat.label}</div>
                 </div>
                 ))}
              </div>
