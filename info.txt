@@ -1,9 +1,4 @@
-- color in navbar
 - pic in hero section 
-- same size heading (text-2xl)
-- same text font size
-- same heading font size
-- product (name, description)
 - responsiveness
-
-- check navbar
+- scrollbar
+- product slider
