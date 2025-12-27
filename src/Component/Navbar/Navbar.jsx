@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/TechnoCom.jfif";
+import TechnoCom from "../../assets/TechnoCom.jfif";
 
 const Navbar = () => {
   const links = [
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className=" w-full flex items-center justify-between px-6 py-4 bg-white/30 backdrop-blur-md border-b-2 border-green-500">
       
-      <img className="max-w-36" src={Logo} alt="Logo" />
+      <img className="max-w-36" src={TechnoCom} alt="Logo" />
 
       <div className="hidden md:flex gap-6 text-green-600 font-medium">
         {links.map((link) => (
