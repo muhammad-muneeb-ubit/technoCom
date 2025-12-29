@@ -1,4 +1,6 @@
-- pic in hero section 
 - responsiveness
 - scrollbar
 - product slider
+- navbar
+- team section
+- client

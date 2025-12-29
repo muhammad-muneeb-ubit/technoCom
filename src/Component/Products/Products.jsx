@@ -1,5 +1,5 @@
 import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Product1 from "../../assets/product1.png";
 import Product2 from "../../assets/product2.png";
 import Product3 from "../../assets/product3.png";
@@ -23,7 +23,7 @@ const Products = () => {
           options={{
             perPage: 3,
             gap: '3rem',
-            autoplay: true,
+            autoplay: false,
             interval: 1000,
             pauseOnHover: true,
             arrows: true,
@@ -40,12 +40,14 @@ const Products = () => {
           aria-label="Products"
         >
           {[Product1, Product2, Product3, Product4].map((img, index) => (
+             
+
             <SplideSlide key={index}>
               <img
                 src={img}
                 alt={`Product ${index + 1}`}
-                className="w-full h-100 object-cover rounded-lg"
-              />
+                className="w-full h-100 object-contain rounded-lg"
+                />
             </SplideSlide>
           ))}
         </Splide>
